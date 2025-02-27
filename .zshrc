@@ -1,4 +1,3 @@
-echo '====================='
 echo sourcing .zshrc
 
 # Set the directory we want to store zinit and plugins
@@ -26,7 +25,11 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # must be set before loading OMZP::brew
-BREW_LOCATION=/usr/local/Homebrew/bin/brew
+BREW_LOCATION=/opt/homebrew/bin/brew
+
+if [ ! -f "$BREW_LOCATION" ]; then
+    BREW_LOCATION=/usr/local/bin/brew
+fi
 
 # must be set before loading OMZL::history.zsh
 HIST_STAMPS="yyyy-mm-dd"
