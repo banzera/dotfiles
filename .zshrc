@@ -16,6 +16,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 export EDITOR="/usr/local/bin/subl --wait"
 export VISUAL="$EDITOR"
 
+export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 
