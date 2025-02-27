@@ -1,0 +1,50 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+continuation_prompt = '▶▶(fg:blue) '
+# add_newline = true
+[character]
+# success_symbol = '[😆](bold green)'
+
+[aws]
+disabled = true
+style = "bold blue"
+displayed_items = "region"
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+us-west-1 = "or"
+
+[ruby]
+disabled = true
+# style = "fg:bright-red"
+# symbol = " "
+
+[custom.rvm]
+symbol = "[ v](fg:bright-red)"
+command = "echo ${GEM_HOME##*/ruby-}"
+format = "via $symbol[$output]($style) "
+style = "fg:bright-red"
+shell = "zsh"
+require_repo = true
+detect_files = ["Gemfile", ".ruby-version", ".rvmrc"]
+detect_extensions = ["rb"]
+
+[custom.ssh_no_keys]
+description = "SSH missing keys"
+# when = "ssh-add -l | grep -q 'no identities'"
+when = false
+command = "echo 🚫"
+format = "$symbol[$output]($style) "
+shell = ["bash", "--noprofile", "--norc"]
+symbol = "🔑"
+style = "bold fg:red"
+
+[custom.ssh_keys]
+description = "SSH key count"
+# when = "ssh-add -l | grep -v -q 'no identities'"
+when = false
+command = "ssh-add -l | grep -v 'no identities' | wc -l"
+format = "$symbol[$output]($style) "
+shell = ["bash", "--noprofile", "--norc"]
+symbol = "🔑"
+style = "bold fg:green"
