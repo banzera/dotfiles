@@ -21,7 +21,8 @@ disabled = true
 
 [custom.rvm]
 symbol = "[ v](fg:bright-red)"
-command = "echo ${GEM_HOME##*/ruby-}"
+# command = "echo ${GEM_HOME##*/ruby-}"
+command = "mise tool ruby --active"
 format = "via $symbol[$output]($style) "
 style = "fg:bright-red"
 shell = "zsh"
