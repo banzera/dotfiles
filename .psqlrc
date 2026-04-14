@@ -10,5 +10,8 @@
 \pset null ⦱
 \unset QUIET
 
+\pset border 2
+\pset linestyle unicode
+
 \echo 🧐 🐘 postgres_dba 6.0 installed. Use ":dba" to see menu
 \set dba '\\i /Users/bbanz/.psql_dba/start.psql'
