@@ -1,0 +1,21 @@
+[tools]
+atuin      = "latest"
+bat        = "latest"
+bat-extras = "latest"
+jq         = "latest"
+opencode   = "latest"
+ruby       = "3.4.8"
+trufflehog = "latest"
+# node       = "lts"
+# ruby       = "4.0"
+"ubi:sst/opencode" = "latest"
+yt-dlp     = "latest"
+zoxide     = "latest"
+
+[env]
+_.plugin-ruby-autoenv = { enabled = true }
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby","node","yarn"]
+experimental = true
+# env_file = ".env.local"
