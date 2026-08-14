@@ -12,12 +12,11 @@ require_relative '.pryrc.d/nori'
 wd = `pwd`.to_s
 
 segments = wd.split '/'
-pj = segments.last.strip
-
-fname = "~/.pry_history_#{pj}"
+pj       = segments.last.strip
+fname    = "~/.pry_history_#{pj}"
 
 puts "Running pry from #{wd}"
-puts "using history file: #{fname}"
+puts " -> Using history file: #{fname}"
 
 Pry.config.history_file = fname
 
